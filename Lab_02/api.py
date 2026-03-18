@@ -73,7 +73,7 @@ def playfair_encrypt():
     key = data['key']
     playfair_cipher_instance = PlayfairCipher(key)
     encrypted_text = playfair_cipher_instance.encrypt_text(plain_text)
-    return jsonify({'encrypted_text': encrypted_text})
+    return jsonify({'encrypted_message': encrypted_text})
 
 @app.route('/api/playfair/decrypt', methods=['POST'])
 def playfair_decrypt():
@@ -82,7 +82,7 @@ def playfair_decrypt():
     key = data['key']
     playfair_cipher_instance = PlayfairCipher(key)
     decrypted_text = playfair_cipher_instance.decrypt_text(cipher_text)
-    return jsonify({'decrypted_text': decrypted_text})
+    return jsonify({'decrypted_message': decrypted_text})
 
 # TRANSPOSITION CIPHER
 @app.route('/api/transposition/encrypt', methods=['POST'])
