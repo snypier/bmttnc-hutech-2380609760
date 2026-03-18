@@ -9,8 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -19,17 +18,19 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(170, 10, 411, 111))
+        self.label.setGeometry(QtCore.QRect(140, 0, 441, 111))
         font = QtGui.QFont()
+        font.setFamily("Proxy 1")
         font.setPointSize(36)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setBold(False)
+        font.setWeight(50)
         self.label.setFont(font)
         self.label.setTextFormat(QtCore.Qt.AutoText)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(50, 120, 91, 31))
         font = QtGui.QFont()
+        font.setFamily("Proxy 1")
         font.setPointSize(14)
         self.label_2.setFont(font)
         self.label_2.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -38,13 +39,15 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(50, 200, 91, 31))
         font = QtGui.QFont()
+        font.setFamily("Proxy 1")
         font.setPointSize(14)
         self.label_3.setFont(font)
         self.label_3.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(50, 240, 91, 41))
+        self.label_4.setGeometry(QtCore.QRect(40, 270, 91, 41))
         font = QtGui.QFont()
+        font.setFamily("Proxy 1")
         font.setPointSize(14)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
@@ -58,10 +61,10 @@ class Ui_MainWindow(object):
         self.Cipher_text.setGeometry(QtCore.QRect(140, 250, 441, 81))
         self.Cipher_text.setObjectName("Cipher_text")
         self.encrypt_button = QtWidgets.QPushButton(self.centralwidget)
-        self.encrypt_button.setGeometry(QtCore.QRect(150, 340, 75, 23))
+        self.encrypt_button.setGeometry(QtCore.QRect(290, 340, 75, 23))
         self.encrypt_button.setObjectName("encrypt_button")
         self.decrypt_button = QtWidgets.QPushButton(self.centralwidget)
-        self.decrypt_button.setGeometry(QtCore.QRect(400, 340, 75, 23))
+        self.decrypt_button.setGeometry(QtCore.QRect(360, 340, 75, 23))
         self.decrypt_button.setObjectName("decrypt_button")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
